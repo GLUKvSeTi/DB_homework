@@ -58,3 +58,10 @@ CREATE TABLE media_files (
     uploaded_at TIMESTAMP NOT NULL,
     FOREIGN KEY (message_id, valid_to) REFERENCES messages(message_id, valid_to)
 );
+
+DROP TABLE IF EXISTS media_files CASCADE;
+DROP TABLE IF EXISTS notifications CASCADE;
+DROP TABLE IF EXISTS messages CASCADE;
+DROP TABLE IF EXISTS chat_participants CASCADE;
+DROP TABLE IF EXISTS chats CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
